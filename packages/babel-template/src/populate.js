@@ -25,11 +25,6 @@ export default function populatePlaceholders(
         );
       }
     });
-    Object.keys(replacements).forEach(key => {
-      if (!metadata.placeholderNames.has(key)) {
-        throw new Error(`Unknown substitution "${key}" given`);
-      }
-    });
   }
 
   // Process in reverse order to AST mutation doesn't change indices that
